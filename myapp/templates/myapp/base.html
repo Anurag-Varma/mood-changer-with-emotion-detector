@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container { 
+  height: 200px;
+  position: relative;
+  
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center1 {
+  margin: 0;
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="center">
+    
+    <h1>Mood Changer using Face Emotion Recognition</h1>
+    <p>This uses face emotions and based on it plays songs to change the mood of the user</p>
+
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="center1">
+   
+    <form action="facedetect/">
+       {% csrf_token %}
+       <input type="submit" value="Click to Try It">
+    </form> 
+    
+  </div>
+</div>
+
+</body>
+</html>
