@@ -1,4 +1,4 @@
-Django==2.2heroku logs --tail
+Django==2.2
 gunicorn==20.0.4
 Keras==2.4.3
 mysqlclient==2.0.1
