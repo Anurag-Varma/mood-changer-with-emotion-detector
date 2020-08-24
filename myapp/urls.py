@@ -8,8 +8,9 @@ from django.conf import settings
 urlpatterns=[
     path('',views.home, name='home'),
     path('facedetect/',views.facedetect,name='facedetect'),
-    path('myapp/', views.play_audio, name='play_audio'),
+    
     ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+#path('myapp/', views.play_audio, name='play_audio'),

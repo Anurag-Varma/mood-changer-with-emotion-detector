@@ -5,14 +5,14 @@ import cv2
 import numpy as np
 from . import files
 from moodchanger import settings
-from .models import Audio
+#from .models import Audio
 
 
 # Create your views here.
 def home(request):
-    return render(request,'base.html')
+    return render(request,'myapp/base.html')
 
-def play_audio(request,):
+"""def play_audio(request,):
     title="songs/Maroon 5 - Memories (Official Video).mp3"
     #print(title)
     audio = Audio.objects.all().get(link=title)
@@ -21,7 +21,7 @@ def play_audio(request,):
         'audio': audio
     }
     #print(audio)
-    return render(request, 'myapp/test.html', context=context)
+    return render(request, 'myapp/test.html', context=context)"""
 
 
 def facedetect(request):
@@ -39,6 +39,7 @@ def facedetect(request):
     i=0
     while(ret!=0):
         
+        label="no face dtected"
         ret, fm=cap.read()
         cv2.imwrite('live_test_img.jpeg', fm)
         
@@ -73,6 +74,6 @@ def facedetect(request):
     cap.release()    
     cv2.destroyAllWindows()
         
-    return render(request,'result.html',{'label':label})
+    return render(request,'myapp/result.html',{'label':label})
     
     
